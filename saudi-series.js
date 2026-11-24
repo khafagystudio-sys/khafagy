@@ -1,0 +1,13 @@
+(()=>{const ps=[...document.querySelectorAll('.sp-poster')];if(!ps.length)return;
+const io='IntersectionObserver'in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target)}}),{threshold:.12}):null;
+ps.forEach(p=>io?io.observe(p):p.classList.add('is-in'));
+const lb=document.getElementById('spLightbox'),img=document.getElementById('spImg');let cur=0;
+const imgs=ps.map(p=>p.querySelector('img'));
+const show=i=>{cur=(i+imgs.length)%imgs.length;img.src=imgs[cur].src;img.alt=imgs[cur].alt};
+ps.forEach((p,i)=>p.querySelector('.sp-open').addEventListener('click',()=>{show(i);lb.showModal()}));
+document.getElementById('spClose').addEventListener('click',()=>lb.close());
+document.getElementById('spPrev').addEventListener('click',()=>show(cur-1));
+document.getElementById('spNext').addEventListener('click',()=>show(cur+1));
+lb.addEventListener('click',e=>{if(e.target===lb)lb.close()});
+lb.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+})();

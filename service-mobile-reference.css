@@ -1,0 +1,29 @@
+/* v134: the supplied number-led reference, adapted only for phone services. */
+@media(max-width:760px){
+ .kh-home .kh-services-section .kh-svc-rows{display:flex;flex-direction:column;gap:0;border-top:1px solid #363636}
+ .kh-home .kh-services-section .kh-svc-row,
+ .kh-home .kh-services-section .kh-svc-row:nth-child(5),
+ .kh-home .kh-services-section .kh-svc-row:hover,
+ .kh-home .kh-services-section .kh-svc-row:nth-child(even):hover{
+  display:grid;grid-template-columns:39% minmax(0,1fr);align-items:center;column-gap:0;row-gap:0;
+  width:100%;min-height:140px;padding:29px 0;box-sizing:border-box;
+  border:0;border-bottom:1px solid #363636;border-radius:0;background:none;transform:none;
+ }
+ .kh-home .kh-services-section .kh-svc-icon,.kh-home .kh-services-section .kh-svc-count{display:none}
+ .kh-home .kh-services-section .kh-svc-kicker{grid-column:1;grid-row:1;align-self:center;justify-self:start;white-space:nowrap;font-size:60px;font-weight:400;line-height:1;letter-spacing:-.065em;color:#777}
+ .kh-home .kh-services-section .kh-svc-kicker::after{content:'';display:inline-block;width:8px;height:8px;margin-left:4px;border-radius:50%;background:#ff5136;vertical-align:baseline}
+ .kh-home .kh-services-section .kh-svc-body{grid-column:2;grid-row:1;gap:9px}
+ .kh-home .kh-services-section .kh-svc-name{font-size:25px;font-weight:400;line-height:1.15;letter-spacing:-.035em;text-transform:uppercase;overflow-wrap:normal;color:#e3e3e3}
+ .kh-home .kh-services-section .kh-svc-label{max-width:none;font-size:13px;font-weight:400;line-height:1.5;color:#a5a5a5}
+ html[data-theme="light"] .kh-home .kh-services-section .kh-svc-rows{border-color:#dededb}
+ html[data-theme="light"] .kh-home .kh-services-section .kh-svc-row,
+ html[data-theme="light"] .kh-home .kh-services-section .kh-svc-row:hover{background:none;border:0;border-bottom:1px solid #dededb;box-shadow:none}
+ html[data-theme="light"] .kh-home .kh-services-section .kh-svc-kicker{color:#b8b8b5}
+ html[data-theme="light"] .kh-home .kh-services-section .kh-svc-name{color:#535350}
+ html[data-theme="light"] .kh-home .kh-services-section .kh-svc-label{color:#73736f}
+}
+@media(max-width:360px){
+ .kh-home .kh-services-section .kh-svc-name{font-size:22px}
+ .kh-home .kh-services-section .kh-svc-kicker{font-size:54px}
+ .kh-home .kh-services-section .kh-svc-row{min-height:135px}
+}

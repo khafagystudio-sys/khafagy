@@ -1,0 +1,6 @@
+/* Preserve the original dot/ring appearance, with stable centers everywhere. */
+body.kh-has-cursor .kh-cur-dot,body.kh-has-cursor .kh-cur-ring{translate:-50% -50%;opacity:0;pointer-events:none!important}
+body.kh-has-cursor.kh-cursor-visible .kh-cur-dot{opacity:1}
+body.kh-has-cursor.kh-cursor-visible .kh-cur-ring{opacity:.7}
+body.kh-has-cursor.kh-cursor-visible.kh-cur-hover .kh-cur-ring{opacity:1}
+@media(hover:none),(pointer:coarse){body.kh-has-cursor .kh-cur-dot,body.kh-has-cursor .kh-cur-ring{display:none!important}}

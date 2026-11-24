@@ -1,0 +1,61 @@
+/* Shared reference-inspired footer. Isolated from page content. */
+.kh-footer.kh-reveal-footer{padding:52px 0 18px;margin-top:clamp(64px,9vh,110px);border-top:1px solid #ffffff2b;color:#f4f3f5;background:transparent;overflow:hidden}
+.kf-top{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;padding:0 4px 74px}.kf-eyebrow{font:500 11px/1.4 Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase;color:#aaa4af;margin:0 0 19px}.kf-contact h2{font:500 clamp(32px,4.3vw,62px)/1.03 Arial,sans-serif;letter-spacing:-.055em;margin:0 0 22px}.kf-actions{display:flex;gap:10px;flex-wrap:wrap}.kf-actions a{display:inline-flex;align-items:center;gap:30px;border:1px solid #ffffff66;border-radius:40px;padding:11px 17px;color:inherit;font:500 11px/1 Arial,sans-serif;text-decoration:none;transition:background .2s,color .2s}.kf-actions a:hover{background:#f4f3f5;color:#131313}.kf-socials{display:flex;flex-direction:column;gap:7px;padding-bottom:4px;min-width:106px}.kf-socials a{color:inherit;text-decoration:none;font:500 12px/1.25 Arial,sans-serif}.kf-socials a:hover{text-decoration:underline;text-underline-offset:4px}.kf-word-reveal{overflow:hidden;width:100%;line-height:0;padding:0 1px}.kf-word{display:block;width:100%;height:auto;overflow:visible;fill:currentColor;transform:translateY(0)}.kf-word text{font-family:Arial,Helvetica,sans-serif;font-size:250px;font-weight:900;letter-spacing:-12px}.kf-motion .kf-word{transform:translateY(115%);transition:transform 1.45s cubic-bezier(.18,.72,.16,1);will-change:transform}.kf-motion.kf-visible .kf-word{transform:translateY(0)}.kf-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 4px 0;border-top:1px solid #ffffff20;margin-top:10px;font:400 10px/1.5 Arial,sans-serif;color:#aaa4af}.kf-bottom p{margin:0}.kf-bottom nav{display:flex;gap:16px;flex-wrap:wrap}.kf-bottom a{color:inherit;text-decoration:none}.kf-bottom a:hover{color:#f4f3f5}.kh-reveal-footer a:focus-visible{outline:2px solid currentColor;outline-offset:5px}
+html[data-theme="light"] .kh-reveal-footer{color:#171719;border-color:#17171933}html[data-theme="light"] .kf-eyebrow,html[data-theme="light"] .kf-bottom{color:#68636c}html[data-theme="light"] .kf-actions a{border-color:#17171966}html[data-theme="light"] .kf-actions a:hover{background:#171719;color:#fff}html[data-theme="light"] .kf-bottom{border-color:#17171922}html[data-theme="light"] .kf-bottom a:hover{color:#171719}
+@media(max-width:650px){.kh-footer.kh-reveal-footer{padding-top:34px}.kf-top{gap:30px;padding-bottom:58px;align-items:flex-start}.kf-contact h2{font-size:clamp(29px,7vw,44px)}.kf-eyebrow{font-size:8px;letter-spacing:.08em;margin-bottom:15px}.kf-actions{gap:8px}.kf-actions a{font-size:10px;gap:13px;padding:10px 12px}.kf-socials{min-width:72px;padding-top:28px;gap:9px}.kf-socials a{font-size:10px}.kf-bottom{align-items:flex-start;flex-wrap:wrap;gap:13px;font-size:9px;padding-top:13px}.kf-bottom p{flex-basis:100%}.kf-bottom nav{gap:13px}.kf-bottom>a{margin-left:auto}}
+@media(prefers-reduced-motion:reduce){.kf-motion .kf-word{transform:none;transition:none;will-change:auto}.kf-actions a{transition:none}}
+html[data-theme="light"] .kh-reveal-footer .kf-actions a{color:#171719}html[data-theme="light"] .kh-reveal-footer .kf-actions a:hover{color:#fff}
+
+/* v89: heavy outlined glyphs, each with an independent upward reveal. */
+.kf-motion .kf-word,.kf-motion.kf-visible .kf-word{transform:none;transition:none;will-change:auto}
+.kf-letter{fill:currentColor;stroke:currentColor;stroke-width:3;stroke-linejoin:round}
+.kf-motion .kf-letter{transform:translateY(115%);transition:transform 1.05s cubic-bezier(.16,.75,.15,1);transition-delay:calc(var(--letter)*90ms);will-change:transform}
+.kf-motion.kf-visible .kf-letter{transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.kf-motion .kf-letter{transform:none;transition:none;will-change:auto}}
+
+/* v97: nearly edge-to-edge, taller footer lettering. */
+.kf-word-reveal{width:calc(100vw - 16px);max-width:none;margin-left:calc(50% - 50vw + 8px);padding:0}
+.kf-word{height:22vw;max-height:420px}
+.kf-top{padding-bottom:42px}
+@media(max-width:650px){.kf-word-reveal{width:calc(100vw - 8px);margin-left:calc(50% - 50vw + 4px)}.kf-word{height:23vw;max-height:none}.kf-top{padding-bottom:36px}}
+
+.kh-footer.kh-reveal-footer{overflow:visible}
+/* The word rises as one text line, matching v96 text timing. */
+.kf-motion .kf-letter,.kf-motion.kf-visible .kf-letter{transform:none;transition:none;will-change:auto}
+.kf-word{will-change:transform}
+@media(prefers-reduced-motion:reduce){.kf-word{transform:none!important;will-change:auto}}
+
+/* v98: restore heavy glyph proportions, keep the broad edge-to-edge word. */
+.kf-word{height:auto;max-height:none}
+@media(max-width:650px){.kf-word{height:auto;max-height:none}}
+
+/* v99: the wordmark is the final visible footer element. */
+.kh-footer.kh-reveal-footer{padding-bottom:0}
+
+/* v100: restore the studio's information columns above the final wordmark. */
+.kh-reveal-footer .kh-footer-top{display:grid;grid-template-columns:1.65fr .8fr .9fr 1.4fr;gap:40px;padding:4px 4px 68px;align-items:start}
+.kh-reveal-footer .kh-footer-brand p{font:400 13px/1.7 Arial,sans-serif;color:#aaa4af;max-width:240px}
+.kh-reveal-footer .kh-footer-col h4{font:700 12px/1.4 Arial,sans-serif;letter-spacing:.06em;color:inherit;margin:0 0 22px}
+.kh-reveal-footer .kh-footer-col a{display:block;width:fit-content;padding:5px 0;font:400 13px/1.5 Arial,sans-serif;color:#aaa4af;text-decoration:none;overflow-wrap:anywhere}
+.kh-reveal-footer .kh-footer-col p{font:400 13px/1.5 Arial,sans-serif;color:#aaa4af;margin:0 0 8px}
+.kh-reveal-footer .kh-footer-col a:hover{color:inherit}
+html[data-theme="light"] .kh-reveal-footer .kh-footer-col a,html[data-theme="light"] .kh-reveal-footer .kh-footer-col p,html[data-theme="light"] .kh-reveal-footer .kh-footer-brand p{color:#68636c}
+@media(max-width:900px){.kh-reveal-footer .kh-footer-top{grid-template-columns:1fr 1fr;gap:34px;padding-bottom:46px}}
+@media(max-width:480px){.kh-reveal-footer .kh-footer-top{grid-template-columns:1fr 1fr;gap:30px 20px;padding:0 4px 38px}.kh-reveal-footer .kh-footer-brand{grid-column:1/-1}.kh-reveal-footer .kh-footer-col:last-child{grid-column:1/-1}.kh-reveal-footer .kh-footer-col h4{margin-bottom:12px}.kh-reveal-footer .kh-footer-wordmark{width:142px;margin-bottom:14px}}
+
+/* v101: center the actual outlined glyph bounds and reveal each letter slowly. */
+.kf-word-reveal{width:calc(var(--kf-viewport,100vw) - 16px);margin-left:calc(50% - var(--kf-viewport,100vw)/2 + 8px)}
+.kf-word{transform:none!important;will-change:auto}
+.kf-letter{transform-box:view-box;will-change:transform}
+@media(max-width:650px){.kf-word-reveal{width:calc(var(--kf-viewport,100vw) - 8px);margin-left:calc(50% - var(--kf-viewport,100vw)/2 + 4px)}}
+@media(prefers-reduced-motion:reduce){.kf-letter{transform:none!important;will-change:auto}}
+
+/* v102: keep only the small studio logo in the phone footer. */
+@media(max-width:650px){.kh-reveal-footer .kf-word-reveal{display:none}.kh-footer.kh-reveal-footer{padding-bottom:0}}
+
+/* v108: final rights and design credit, below the information columns. */
+.kh-reveal-footer .kh-footer-credit{margin:0;padding:20px 4px 24px;border-top:1px solid #ffffff24;font:400 11px/1.8 Arial,sans-serif;letter-spacing:.01em;color:#a9a1b3;display:flex;justify-content:space-between;gap:8px 24px;flex-wrap:wrap}
+.kh-reveal-footer .kh-footer-credit span{color:#d4c9e1}
+html[data-theme="light"] .kh-reveal-footer .kh-footer-credit{border-color:#241e2d24;color:#75697f}
+html[data-theme="light"] .kh-reveal-footer .kh-footer-credit span{color:#493858}
+@media(max-width:480px){.kh-reveal-footer .kh-footer-credit{font-size:10px;display:block;padding-top:18px;padding-bottom:22px}.kh-reveal-footer .kh-footer-credit span{display:block;margin-top:4px}}

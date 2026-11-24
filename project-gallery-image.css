@@ -1,0 +1,10 @@
+/* v127: show the supplied CURA ad in full, without crop or distortion. */
+.kh-home .kh-cura-project .kh-work-visual{aspect-ratio:1184/1600;background:#10183f}
+.kh-home .kh-cura-project .kh-work-visual::before{display:none}
+.kh-home .kh-cura-project .kh-work-visual img{display:block;width:100%;height:100%;object-fit:contain;position:relative;z-index:1}
+
+/* v128: remove caption rows only from the home moving gallery. */
+.kh-home .kh-home-project-loop .kh-work-info{display:none}
+
+/* v130: avoid selecting artwork while dragging with a mouse. */
+@media(hover:hover) and (pointer:fine){.kh-home .kh-home-project-loop{user-select:none;-webkit-user-select:none}.kh-home .kh-home-project-loop img{-webkit-user-drag:none}}

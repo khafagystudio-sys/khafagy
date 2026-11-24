@@ -1,0 +1,28 @@
+.kh-home .kh-work-stats{margin-bottom:58px}
+.kh-home .kh-process{padding:0 var(--site-gutter);margin:0 0 110px}
+.kh-process h2{font:400 clamp(26px,3vw,40px)/1.02 Arial,Helvetica,sans-serif;letter-spacing:-.045em;margin:0 0 30px;color:#ededed}
+.kh-process-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.kh-process-card{position:relative;min-width:0;height:220px;border:1px solid #414141;border-radius:14px;overflow:hidden;background:#252525}
+.kh-process-card:nth-child(2),.kh-process-card:nth-child(3){background:#2d2d2d}
+.kh-process-number{position:absolute;bottom:-48px;left:13px;font:300 clamp(150px,17vw,252px)/1 Arial,Helvetica,sans-serif;letter-spacing:-.095em;color:#e6e3e8;pointer-events:none}
+.kh-process-copy{position:absolute;bottom:22px;right:22px;width:39%;z-index:1}
+.kh-process-copy h3{margin:0 0 8px;font:500 17px/1.15 Arial,Helvetica,sans-serif;letter-spacing:-.025em;color:#f2f2f2}
+.kh-process-copy p{margin:0;font:400 11px/1.45 Arial,Helvetica,sans-serif;color:#bbb7bf;max-width:23ch}
+.kh-process-card:nth-child(n+3) .kh-process-number{left:auto;right:23px}
+.kh-process-card:nth-child(n+3) .kh-process-copy{left:22px;right:auto}
+@media(max-width:900px){.kh-process-card{height:185px}.kh-process-number{font-size:190px;bottom:-34px}.kh-process-copy{right:16px;bottom:18px;width:40%}.kh-process-copy h3{font-size:14px}.kh-process-copy p{font-size:10px}.kh-process-card:nth-child(n+3) .kh-process-copy{left:16px}.kh-process-card:nth-child(n+3) .kh-process-number{right:20px}}
+@media(max-width:600px){.kh-home .kh-work-stats{margin-bottom:42px}.kh-home .kh-process{padding:0 20px;margin-bottom:74px}.kh-process h2{font-size:28px;margin-bottom:22px}.kh-process-grid{gap:6px}.kh-process-card{height:183px;border-radius:9px}.kh-process-number{font-size:135px;left:8px;bottom:-26px}.kh-process-copy,.kh-process-card:nth-child(n+3) .kh-process-copy{top:15px;bottom:auto;left:13px;right:13px;width:auto}.kh-process-copy h3{font-size:13px;margin-bottom:5px}.kh-process-copy p{font-size:10px;line-height:1.35;max-width:22ch}.kh-process-card:nth-child(n+3) .kh-process-number{right:16px}}
+@media(min-width:601px) and (max-width:900px){.kh-process-card{height:210px}.kh-process-number{font-size:170px;bottom:-30px}.kh-process-copy,.kh-process-card:nth-child(n+3) .kh-process-copy{top:16px;bottom:auto;left:16px;right:16px;width:auto}.kh-process-copy p{max-width:30ch}}
+@media(max-width:600px){.kh-process-number{font-size:clamp(100px,34vw,135px);bottom:-24px}.kh-process-card:nth-child(n+3) .kh-process-number{right:12px}}
+/* V82: wide, low reference cards with half-hidden oversized numerals. */
+.kh-process-card{height:auto;aspect-ratio:2.8}
+.kh-process-number{font-size:clamp(180px,20vw,290px);bottom:-.48em;left:12px}
+.kh-process-copy{bottom:18px;right:18px;width:38%}
+.kh-process-card:nth-child(n+3) .kh-process-number{right:22px}
+.kh-process-card:nth-child(n+3) .kh-process-copy{left:18px}
+@media(min-width:601px) and (max-width:900px){.kh-process-number{font-size:180px;bottom:-.48em}.kh-process-copy,.kh-process-card:nth-child(n+3) .kh-process-copy{top:auto;bottom:12px;left:auto;right:12px;width:40%}.kh-process-card:nth-child(n+3) .kh-process-copy{left:12px;right:auto}.kh-process-copy h3{font-size:12px}.kh-process-copy p{font-size:9px}}
+@media(max-width:600px){.kh-process-grid{grid-template-columns:1fr}.kh-process-card{aspect-ratio:2.8}.kh-process-number{font-size:180px;bottom:-.48em;left:10px}.kh-process-copy,.kh-process-card:nth-child(n+3) .kh-process-copy{top:auto;bottom:13px;left:auto;right:13px;width:42%}.kh-process-card:nth-child(n+3) .kh-process-copy{left:13px;right:auto}.kh-process-card:nth-child(n+3) .kh-process-number{right:18px}.kh-process-copy h3{font-size:12px}.kh-process-copy p{font-size:9px;line-height:1.35}}
+@media(max-width:360px){.kh-process-number{font-size:150px}.kh-process-copy h3{font-size:11px}.kh-process-copy p{font-size:8px}}
+@media(max-width:900px){.kh-process-number{font-size:150px}.kh-process-copy,.kh-process-card:nth-child(n+3) .kh-process-copy{width:40%}}
+@media(max-width:360px){.kh-process-number{font-size:125px}.kh-process-copy,.kh-process-card:nth-child(n+3) .kh-process-copy{width:41%}}
+@media(max-width:360px){.kh-process-number{font-size:110px}.kh-process-copy,.kh-process-card:nth-child(n+3) .kh-process-copy{width:39%}}

@@ -1,0 +1,9 @@
+/* Natural, reversible scroll stacking. No wheel interception. */
+.kh-site.work-scroll-page{overflow:clip}
+.work-concept .wc-grid.wc-scroll-stack{display:flex;flex-direction:column;gap:24px;padding-bottom:clamp(180px,42vh,420px)}
+.wc-scroll-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;position:sticky;top:calc(var(--stack-top,90px) + var(--row-index)*14px);z-index:calc(1 + var(--row-index));width:100%;background:transparent;border-radius:26px}
+#top .work-concept .wc-scroll-row>.wc-category{margin:0!important;width:100%;min-width:0;z-index:auto;order:var(--project-order)}
+.work-concept .wc-scroll-row .wc-preview{box-shadow:0 -12px 28px #0002}
+/* v126: keep phone stacking, without a viewport-sized empty tail. */
+@media(max-width:650px){.wc-scroll-row{grid-template-columns:minmax(0,1fr);gap:20px}.work-concept .wc-grid.wc-scroll-stack{gap:20px;padding-bottom:20px}}
+@media(prefers-reduced-motion:reduce){.wc-scroll-row{position:relative;top:auto}.work-concept .wc-grid.wc-scroll-stack{padding-bottom:0}}

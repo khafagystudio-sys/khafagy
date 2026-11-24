@@ -1,0 +1,10 @@
+/* One shared motion rhythm, without changing the approved layout. */
+
+@media(hover:hover) and (pointer:fine){
+.kh-btn,.kf-actions a,.kc-detail,.ks-service{transition:background-color .3s,color .3s,border-color .3s,box-shadow .3s}
+.kh-btn:hover,.kf-actions a:hover{translate:0 -3px}
+
+.ka-portrait img,.kh-featured-art img{transition:scale 1s cubic-bezier(.22,.72,.18,1)}
+.ka-portrait:hover img,.kh-featured-art:hover img{scale:1.025}
+}
+@media(prefers-reduced-motion:reduce){.kh-card-ready{opacity:1!important;translate:none!important}.kh-btn,.kf-actions a,.kc-detail,.ks-service,.ka-portrait img,.kh-featured-art img{transition:none!important;translate:none!important;scale:none!important}}

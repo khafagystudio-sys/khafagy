@@ -1,0 +1,26 @@
+/* v131: mobile supporting copy, without changing desktop type or section order. */
+@media(max-width:680px){
+ .kh-home .kh-svc-row .kh-svc-label{font-size:13px;line-height:1.5}
+ .kh-featured-note,.kh-testimonial-note{font-size:12px;line-height:1.6}
+ .kh-featured-controls button,.kh-featured-controls small{font-size:12px}
+ .kh-home .kh-process-card p{font-size:13px;line-height:1.5}
+ .work-status,#workPreviewNote{font-size:12px;line-height:1.5}
+ .pd-overview p,.pd-details p,.pd-meta dd{font-size:13px;line-height:1.6}
+ .ks-heading-copy p,.ks-service>p,.ks-cart-empty,.ks-quote-note,.ks-wallet p,.ks-free-note p,.ks-preview-note,.ks-download-copy{font-size:13px;line-height:1.6}
+ .ks-discovery-meta{align-items:flex-start;gap:12px}
+ .ks-discovery-meta p,.ks-result-count,.ks-card-bottom>span,.ks-card-bottom button,.ks-card-meta,.ks-access,.ks-summary-sub,.ks-cart-label p,.ks-cost-row,.ks-cost-row strong,.ks-no-order,.ks-wallet div>span,.ks-file-details div{font-size:12px;line-height:1.5}
+ .ks-result-count{white-space:normal;text-align:right}
+ .ks-card-meta{flex-wrap:wrap;gap:8px}
+ .ks-card-bottom{align-items:center;gap:10px}
+ .ks-card-bottom button{flex-shrink:0;padding:11px 13px;gap:12px}
+ .ks-card-bottom>span{max-width:46%}
+ .ks-access{padding:5px 8px}
+ .ks-cart-label h3,.ks-payment-steps h3{font-size:13px;line-height:1.4}
+ .ks-payment-steps p,.ks-review-state p,.ks-review-state>span,.ks-payment-intro,.ks-payment-dialog .ks-upload-disabled:disabled,.ks-payment-dialog .ks-submit-proof:disabled{font-size:12px;line-height:1.6}
+ .ks-payment-dialog .ks-preview-pill{font-size:11px;line-height:1.4}
+ .kc-intro p,.kc-form-bottom p,.kc-form .kc-form-bottom button:disabled{font-size:12px;line-height:1.6}
+ .kc-form-bottom{align-items:flex-start;flex-wrap:wrap;gap:18px}
+ .kc-form-bottom p{max-width:none;flex:1 1 170px}
+ .kc-form .kc-form-bottom button:disabled{flex:0 0 auto;gap:14px}
+ .kc-detail-label,.kc-social-row a{font-size:12px;line-height:1.5}
+}

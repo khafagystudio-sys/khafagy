@@ -1,0 +1,4 @@
+/* v132: five matching open-line symbols, without app-style icon tiles. */
+.kh-home .kh-services-section .kh-svc-icon{border:0;border-radius:0;background:none;color:#f1f1f1}
+.kh-home .kh-services-section .kh-svc-icon svg{width:28px;height:28px;overflow:visible}
+html[data-theme="light"] .kh-home .kh-services-section .kh-svc-icon{border:0;background:none;color:#242424}
